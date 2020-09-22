@@ -2,13 +2,18 @@ from random import choice
 
 def get_bot_response(user_response):
     #types of food response suggesstions
-    bot_response_indian = [""]
-    bot_response_italian = [""]
-    bot_response_american = [""]
+    bot_response_indian = ["samosa", "tikka masala", "chana masala", "saag paneer", 
+        "vindaloo", "dal", "curry"]
+    bot_response_italian = ["spaghetti", "caprese salad", "ravioli", "gnocchi", 
+        "pizza", "charcuterie board", "fettuccine alfredo", "pasta primavera"]
+    bot_response_american = ["burger", "fries", "salad", "mac and cheese", 
+        "clam chowder", "bbq"]
     bot_response_mexican = ["empenadas", "floutas", "tacos", "burrito", 
-        "chillaquiles", "chile relleno", ""]
-    bot_response_japanese = [""]
-    bot_response_greek = [""]
+        "chillaquiles", "chile relleno", "posole", "menudo"]
+    bot_response_japanese = ["sushi", "ramen", "tempura", "soba noodles",
+        "sashimi", "miso soup", "edamame", "mochi"]
+    bot_response_greek = ["gyro", "dolmas", "moussaka", "souvlaki", "tzatziki",
+        "baklava", "spanakopita", "hummus", "greek salad"]
 
     #if statements for user input on type of food
     if user_response == "indian":
@@ -25,7 +30,7 @@ def get_bot_response(user_response):
         return "When in doubt, look at Yelp!"
 
 print("Welcome to Food Bot!")
-print("What kind of food are you craving? I will give a suggestion on what to order... ")
+print("What type of food are you craving? I will give a suggestion on what to order... ")
 
 user_response = ""
 
