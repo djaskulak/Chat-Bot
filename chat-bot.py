@@ -5,7 +5,8 @@ def get_bot_response(user_response):
     bot_response_indian = [""]
     bot_response_italian = [""]
     bot_response_american = [""]
-    bot_response_mexican = [""]
+    bot_response_mexican = ["empenadas", "floutas", "tacos", "burrito", 
+        "chillaquiles", "chile relleno", ""]
     bot_response_japanese = [""]
     bot_response_greek = [""]
 
@@ -23,3 +24,17 @@ def get_bot_response(user_response):
     else:
         return "When in doubt, look at Yelp!"
 
+print("Welcome to Food Bot!")
+print("What kind of food are you craving? I will give a suggestion on what to order... ")
+
+user_response = ""
+
+while True:
+  user_response = input("What kind of food are you craving? ")
+  
+  # Quits program when user responds with 'done'
+  if user_response == "done":
+    break
+
+  bot_response = get_bot_response(user_response)
+  print(bot_response)
